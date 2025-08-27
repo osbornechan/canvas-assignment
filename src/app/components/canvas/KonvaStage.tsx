@@ -404,7 +404,8 @@ export default observer(function KonvaStage() {
             width={dimensions.width}
             height={dimensions.height}
             fill={
-              canvasStore.layers.findLast(({ id }) => id === backgroundId)?.fill
+              canvasStore.layers.findLast(({ id }) => id === backgroundId)
+                ?.fill ?? "#FFFFFF"
             }
             onClick={(e) => onBgClick(e)}
           />
